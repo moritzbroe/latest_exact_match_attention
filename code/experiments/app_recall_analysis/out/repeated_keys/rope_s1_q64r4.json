@@ -1,0 +1,26 @@
+{
+ "checkpoint": "experiments/main_recall/out/rope/s1/n64/model_best.pt",
+ "checkpoint_size_bytes": 4793634,
+ "arch": "rope",
+ "seed": "s1",
+ "seed_index": 1,
+ "dim": 64,
+ "dim_ff": 256,
+ "depth": 2,
+ "num_heads": 1,
+ "attention": "softmax",
+ "position": "rope",
+ "diagnostic": "competing_associations_q64r4",
+ "n_queries": 64,
+ "key_repeats": 4,
+ "tokens": 577,
+ "query_tokens": 8192,
+ "sample_seed": 0,
+ "mass_by_occurrence": [
+  0.00508,
+  0.03947,
+  0.18508,
+  0.53113
+ ],
+ "mass_elsewhere": 0.23923
+}

@@ -1,0 +1,30 @@
+# bigrams occurring at most 100 times per 10B training tokens whose two
+# occurrences are 8192-16384 tokens apart, in 16384-token held-out windows.
+# trigger -> token :: [earlier occurrence]...(tokens hidden)...[scored occurrence]
+# sampled with seed 0, 2 tokens of context either side.
+
+### UNDISTRACTED (10 of 740)
+'set' -> ' L' :: [ and Lifset Lajum]...(10102)...[ that Lifset Lajum]
+'airs' -> ' /' :: [-Hairs / Nit-]...(8375)...[-Hairs / Nit-]
+'aration' -> ' Scheme' :: [ Traffic Separation Scheme (TS]...(13845)...[ Traffic Separation Scheme approaching Boston]
+' Living' -> ' Res' :: [at. Living Resour.]...(12354)...[at. Living Resour.]
+'tery' -> ' figur' :: [ or pottery figurines of]...(8399)...[ from pottery figurines of]
+'dec' -> 'affe' :: [of (decaffeinated C]...(8476)...[ House (decaffeinated coffee]
+' battle' -> ' organization' :: [ enlarged our battle organization, whose]...(8269)...[ a joint battle organization should be]
+' learned' -> ' object' :: [/or learned object–action]...(8216)...[/or learned object-action]
+'Low' -> ' Claim' :: [ ‘Low Claim Assert]...(10495)...[ ‘Low Claim Assert]
+'eco' -> ' JP' :: [: Grieco JP, A]...(9297)...[. Grieco JP, A]
+
+### DISTRACTED (10 of 1873)
+# the middle span is the LAST occurrence of the trigger before the
+# scored one, whose continuation differs
+' Jazz' -> ' P' :: [ (Great Jazz Pianists]...(12379)...[ of his Jazz Exercises]...(3)...[ the Young Jazz Pianist]
+' /' -> ' Meg' :: [ the Issue / Megatr]...(8370)...[ the Issue / Clouding the Issue / Megatr]
+' Classical' -> ' Adv' :: [ not the Classical Advaita]...(2758)...[2011), Classical Sā�]...(9271)...[ Modern and Classical Advaita]
+' through' -> ' DI' :: [ launched online through DIKSHA]...(9565)...[ disseminated through telecast and]...(2)...[ also available through DIKSHA]
+' mathematic' -> ' exercise' :: [, pdf mathematic exercise test for]...(8479)...[\nAdditional mathematic progression worksheet]...(903)...[, pdf mathematic exercise for 8]
+' trend' -> '=' :: [; P trend=0.]...(12360)...[; p trend = 0.]...(477)...[p for trend= 0.]
+']' -> ' Gent' :: [ killed a] Gentile is]...(13045)...[ on the] dead is also]...(30)...[ours on] Gentiles,]
+'bury' -> 'ites' :: [ Hawkesburyites, but]...(11313)...[ Hawkesbury river, and]...(884)...[ Hawkesburyites\nwho]
+'═' -> 'р' :: [ У═рє]...(6623)...[╘═). The first]...(2026)...[ У═рє]
+' Clay' -> ' that' :: [ said of Clay that "the]...(14145)...[ joined Henry Clay and Albert Gall]...(365)...[ rival candidate Clay that led the]

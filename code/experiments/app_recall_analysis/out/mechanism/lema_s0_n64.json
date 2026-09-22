@@ -1,0 +1,22 @@
+{
+ "ckpt": "experiments/main_recall/out/lema/s0",
+ "arch": "lema",
+ "seed": "s0",
+ "n": 64,
+ "tokens": 193,
+ "samples": 8,
+ "queries": 512,
+ "accuracy": 1.0,
+ "sample_seed": 0,
+ "prev": [
+  1.0,
+  0.0
+ ],
+ "value": [
+  0.0,
+  1.0
+ ],
+ "q0_sep": 1.0,
+ "q0_none": 0.0,
+ "q0_other": 0.0
+}

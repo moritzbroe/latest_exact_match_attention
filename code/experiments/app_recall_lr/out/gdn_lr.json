@@ -1,0 +1,507 @@
+{
+ "dim_ff": 256,
+ "evaluation": "model_best.pt at each stage; 32768 held-out predictions per n; validation seed 7",
+ "runs": [
+  {
+   "run": "experiments/app_recall_lr/out/gdn_lr0.0003/s0",
+   "arch": "gdn",
+   "lr": 0.0003,
+   "seed": 0,
+   "stage_steps": 50000,
+   "ladder": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096
+   ],
+   "points": {
+    "2": 1.0,
+    "4": 1.0,
+    "8": 0.999908447265625,
+    "16": 0.999908447265625,
+    "32": 0.99981689453125,
+    "64": 0.999847412109375,
+    "128": 0.995513916015625,
+    "256": 0.790069580078125,
+    "512": 0.6087646484375,
+    "1024": 0.224334716796875,
+    "2048": 0.05914306640625,
+    "4096": 0.017913818359375
+   },
+   "stages": {
+    "2": {
+     "last_probe_step": 2750,
+     "best_probe_acc": 1.0,
+     "probes": 12,
+     "best_step": 2750,
+     "best_acc": 1.0,
+     "batch": 16384
+    },
+    "4": {
+     "last_probe_step": 6750,
+     "best_probe_acc": 1.0,
+     "probes": 28,
+     "best_step": 6750,
+     "best_acc": 1.0,
+     "batch": 8192
+    },
+    "8": {
+     "last_probe_step": 2000,
+     "best_probe_acc": 1.0,
+     "probes": 9,
+     "best_step": 2000,
+     "best_acc": 1.0,
+     "batch": 4096
+    },
+    "16": {
+     "last_probe_step": 5500,
+     "best_probe_acc": 1.0,
+     "probes": 23,
+     "best_step": 5500,
+     "best_acc": 1.0,
+     "batch": 2048
+    },
+    "32": {
+     "last_probe_step": 6500,
+     "best_probe_acc": 1.0,
+     "probes": 27,
+     "best_step": 6500,
+     "best_acc": 1.0,
+     "batch": 1024
+    },
+    "64": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.999969482421875,
+     "probes": 201,
+     "best_step": 31000,
+     "best_acc": 0.999969482421875,
+     "batch": 512
+    },
+    "128": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.99566650390625,
+     "probes": 201,
+     "best_step": 48750,
+     "best_acc": 0.99566650390625,
+     "batch": 256
+    },
+    "256": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.79315185546875,
+     "probes": 201,
+     "best_step": 48250,
+     "best_acc": 0.79315185546875,
+     "batch": 128
+    },
+    "512": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.610321044921875,
+     "probes": 201,
+     "best_step": 48500,
+     "best_acc": 0.610321044921875,
+     "batch": 64
+    },
+    "1024": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.2239990234375,
+     "probes": 201,
+     "best_step": 48000,
+     "best_acc": 0.2239990234375,
+     "batch": 32
+    },
+    "2048": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.062652587890625,
+     "probes": 201,
+     "best_step": 49999,
+     "best_acc": 0.062652587890625,
+     "batch": 16
+    },
+    "4096": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.0186767578125,
+     "probes": 201,
+     "best_step": 49500,
+     "best_acc": 0.0186767578125,
+     "batch": 8
+    }
+   },
+   "train_example": {
+    "steps": 50000,
+    "out": "experiments/app_recall_lr/out/gdn_lr0.0003/s0/n2",
+    "lr": 0.0003,
+    "lr_final": 0.0,
+    "warmup": 1000,
+    "weight_decay": 0.1,
+    "adam_betas": [
+     0.9,
+     0.999
+    ],
+    "grad_clip": 1.0,
+    "grad_accum": 1,
+    "batch": 16384,
+    "c_start": 1000000000,
+    "c_steps": 10000,
+    "alpha_start": 1000000000,
+    "alpha_speed": 1000,
+    "alpha_target": 10.0,
+    "alpha_init": null,
+    "alpha_bwd_cap": 2.0,
+    "exact_forward": false,
+    "checkpoint_blocks": false,
+    "lr_alpha_phase": 0.0,
+    "beta": 2.0,
+    "log_every": 100,
+    "probe_every": 250,
+    "probe_batches": 1,
+    "early_stop_acc": 1.0,
+    "checkpoint_at": [],
+    "resume_every": 5000,
+    "seed": 0,
+    "device": "cuda"
+   }
+  },
+  {
+   "run": "experiments/main_recall/out/gdn/s0",
+   "arch": "gdn",
+   "lr": 0.001,
+   "seed": 0,
+   "stage_steps": 50000,
+   "ladder": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096
+   ],
+   "points": {
+    "2": 0.999969482421875,
+    "4": 1.0,
+    "8": 0.999969482421875,
+    "16": 0.99993896484375,
+    "32": 0.999755859375,
+    "64": 0.99981689453125,
+    "128": 0.999359130859375,
+    "256": 0.985931396484375,
+    "512": 0.670013427734375,
+    "1024": 0.247894287109375,
+    "2048": 0.077667236328125,
+    "4096": 0.02532958984375
+   },
+   "stages": {
+    "2": {
+     "last_probe_step": 1250,
+     "best_probe_acc": 1.0,
+     "probes": 6,
+     "best_step": 1250,
+     "best_acc": 1.0,
+     "batch": 16384
+    },
+    "4": {
+     "last_probe_step": 3000,
+     "best_probe_acc": 1.0,
+     "probes": 13,
+     "best_step": 3000,
+     "best_acc": 1.0,
+     "batch": 8192
+    },
+    "8": {
+     "last_probe_step": 1250,
+     "best_probe_acc": 1.0,
+     "probes": 6,
+     "best_step": 1250,
+     "best_acc": 1.0,
+     "batch": 4096
+    },
+    "16": {
+     "last_probe_step": 2000,
+     "best_probe_acc": 1.0,
+     "probes": 9,
+     "best_step": 2000,
+     "best_acc": 1.0,
+     "batch": 2048
+    },
+    "32": {
+     "last_probe_step": 11000,
+     "best_probe_acc": 1.0,
+     "probes": 45,
+     "best_step": 11000,
+     "best_acc": 1.0,
+     "batch": 1024
+    },
+    "64": {
+     "last_probe_step": 15250,
+     "best_probe_acc": 1.0,
+     "probes": 62,
+     "best_step": 15250,
+     "best_acc": 1.0,
+     "batch": 512
+    },
+    "128": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.99951171875,
+     "probes": 201,
+     "best_step": 46500,
+     "best_acc": 0.99951171875,
+     "batch": 256
+    },
+    "256": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.986083984375,
+     "probes": 201,
+     "best_step": 49750,
+     "best_acc": 0.986083984375,
+     "batch": 128
+    },
+    "512": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.668060302734375,
+     "probes": 201,
+     "best_step": 48500,
+     "best_acc": 0.668060302734375,
+     "batch": 64
+    },
+    "1024": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.247161865234375,
+     "probes": 201,
+     "best_step": 48000,
+     "best_acc": 0.247161865234375,
+     "batch": 32
+    },
+    "2048": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.07696533203125,
+     "probes": 201,
+     "best_step": 47250,
+     "best_acc": 0.07696533203125,
+     "batch": 16
+    },
+    "4096": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.02557373046875,
+     "probes": 201,
+     "best_step": 49500,
+     "best_acc": 0.02557373046875,
+     "batch": 8
+    }
+   },
+   "train_example": {
+    "steps": 50000,
+    "out": "experiments/main_recall/out/gdn/s0/n2",
+    "lr": 0.001,
+    "lr_final": 0.0,
+    "warmup": 1000,
+    "weight_decay": 0.1,
+    "adam_betas": [
+     0.9,
+     0.999
+    ],
+    "grad_clip": 1.0,
+    "grad_accum": 1,
+    "batch": 16384,
+    "c_start": 1000000000,
+    "c_steps": 10000,
+    "alpha_start": 1000000000,
+    "alpha_speed": 1000,
+    "alpha_target": 10.0,
+    "alpha_init": null,
+    "alpha_bwd_cap": 2.0,
+    "exact_forward": false,
+    "checkpoint_blocks": false,
+    "lr_alpha_phase": 0.0,
+    "beta": 2.0,
+    "log_every": 100,
+    "probe_every": 250,
+    "probe_batches": 1,
+    "early_stop_acc": 1.0,
+    "checkpoint_at": [],
+    "resume_every": 5000,
+    "seed": 0,
+    "device": "cuda"
+   }
+  },
+  {
+   "run": "experiments/app_recall_lr/out/gdn_lr0.003/s0",
+   "arch": "gdn",
+   "lr": 0.003,
+   "seed": 0,
+   "stage_steps": 50000,
+   "ladder": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096
+   ],
+   "points": {
+    "2": 1.0,
+    "4": 0.999969482421875,
+    "8": 1.0,
+    "16": 0.999969482421875,
+    "32": 0.999847412109375,
+    "64": 0.99993896484375,
+    "128": 0.994049072265625,
+    "256": 0.97650146484375,
+    "512": 0.624664306640625,
+    "1024": 0.196990966796875,
+    "2048": 0.04461669921875,
+    "4096": 0.020751953125
+   },
+   "stages": {
+    "2": {
+     "last_probe_step": 750,
+     "best_probe_acc": 1.0,
+     "probes": 4,
+     "best_step": 750,
+     "best_acc": 1.0,
+     "batch": 16384
+    },
+    "4": {
+     "last_probe_step": 2000,
+     "best_probe_acc": 1.0,
+     "probes": 9,
+     "best_step": 2000,
+     "best_acc": 1.0,
+     "batch": 8192
+    },
+    "8": {
+     "last_probe_step": 3750,
+     "best_probe_acc": 1.0,
+     "probes": 16,
+     "best_step": 3750,
+     "best_acc": 1.0,
+     "batch": 4096
+    },
+    "16": {
+     "last_probe_step": 2500,
+     "best_probe_acc": 1.0,
+     "probes": 11,
+     "best_step": 2500,
+     "best_acc": 1.0,
+     "batch": 2048
+    },
+    "32": {
+     "last_probe_step": 21750,
+     "best_probe_acc": 1.0,
+     "probes": 88,
+     "best_step": 21750,
+     "best_acc": 1.0,
+     "batch": 1024
+    },
+    "64": {
+     "last_probe_step": 35000,
+     "best_probe_acc": 1.0,
+     "probes": 141,
+     "best_step": 35000,
+     "best_acc": 1.0,
+     "batch": 512
+    },
+    "128": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.99395751953125,
+     "probes": 201,
+     "best_step": 49000,
+     "best_acc": 0.99395751953125,
+     "batch": 256
+    },
+    "256": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.979736328125,
+     "probes": 201,
+     "best_step": 47750,
+     "best_acc": 0.979736328125,
+     "batch": 128
+    },
+    "512": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.628570556640625,
+     "probes": 201,
+     "best_step": 48500,
+     "best_acc": 0.628570556640625,
+     "batch": 64
+    },
+    "1024": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.1939697265625,
+     "probes": 201,
+     "best_step": 46750,
+     "best_acc": 0.1939697265625,
+     "batch": 32
+    },
+    "2048": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.050506591796875,
+     "probes": 201,
+     "best_step": 36750,
+     "best_acc": 0.050506591796875,
+     "batch": 16
+    },
+    "4096": {
+     "last_probe_step": 49999,
+     "best_probe_acc": 0.021026611328125,
+     "probes": 201,
+     "best_step": 48500,
+     "best_acc": 0.021026611328125,
+     "batch": 8
+    }
+   },
+   "train_example": {
+    "steps": 50000,
+    "out": "experiments/app_recall_lr/out/gdn_lr0.003/s0/n2",
+    "lr": 0.003,
+    "lr_final": 0.0,
+    "warmup": 1000,
+    "weight_decay": 0.1,
+    "adam_betas": [
+     0.9,
+     0.999
+    ],
+    "grad_clip": 1.0,
+    "grad_accum": 1,
+    "batch": 16384,
+    "c_start": 1000000000,
+    "c_steps": 10000,
+    "alpha_start": 1000000000,
+    "alpha_speed": 1000,
+    "alpha_target": 10.0,
+    "alpha_init": null,
+    "alpha_bwd_cap": 2.0,
+    "exact_forward": false,
+    "checkpoint_blocks": false,
+    "lr_alpha_phase": 0.0,
+    "beta": 2.0,
+    "log_every": 100,
+    "probe_every": 250,
+    "probe_batches": 1,
+    "early_stop_acc": 1.0,
+    "checkpoint_at": [],
+    "resume_every": 5000,
+    "seed": 0,
+    "device": "cuda"
+   }
+  }
+ ]
+}

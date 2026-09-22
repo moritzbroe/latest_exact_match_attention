@@ -1,0 +1,56 @@
+{
+ "model": {
+  "vocab_size": 50304,
+  "depth": 4,
+  "dim": 256,
+  "num_heads": 4,
+  "d_qk": 64,
+  "d_v": 64,
+  "dim_ff": 768,
+  "num_kv_heads": 4,
+  "attn": "softmax",
+  "pos": "rope",
+  "rope_base": 10000.0,
+  "gdn_expand_v": 2,
+  "norm_eps": 1e-05
+ },
+ "train": {
+  "steps": 17800,
+  "out": "experiments/main_lm/out/rope256_s2",
+  "lr": 0.004,
+  "lr_final": 4e-05,
+  "warmup": 356,
+  "weight_decay": 0.1,
+  "adam_betas": [
+   0.9,
+   0.999
+  ],
+  "grad_clip": 1.0,
+  "grad_accum": 1,
+  "batch": 16,
+  "c_start": 356,
+  "c_steps": 1424,
+  "alpha_start": 1780,
+  "alpha_speed": 1622,
+  "alpha_target": 10.0,
+  "alpha_init": null,
+  "alpha_bwd_cap": 2.0,
+  "exact_forward": false,
+  "checkpoint_blocks": false,
+  "lr_alpha_phase": 0.0,
+  "beta": 4.0,
+  "log_every": 100,
+  "probe_every": 0,
+  "probe_batches": 1,
+  "early_stop_acc": 1.0,
+  "checkpoint_at": [
+   1780,
+   8900,
+   16020
+  ],
+  "resume_every": 5000,
+  "seed": 2,
+  "device": "cuda"
+ },
+ "task": "tokens: vocab 50257, train 30.859B, val 0.123B, test 0.127B"
+}

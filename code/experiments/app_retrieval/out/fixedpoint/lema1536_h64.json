@@ -1,0 +1,42 @@
+{
+ "model": "lema1536_h64",
+ "ctx": 16384,
+ "seed": 0,
+ "needle": "One of the special magic numbers for eminent-eyeglasses is: 4719574.",
+ "question": "What is the special magic number for eminent-eyeglasses mentioned in the provided text? The special magic number for eminent-eyeglasses mentioned in the provided text is",
+ "filler_lines": 647,
+ "needle_after": 244,
+ "before": {
+  "fixed_after": 21,
+  "keys_fixed_after": 15,
+  "reps_fed": 37,
+  "unchanged_tail": 16,
+  "entries": {
+   "total": 18393,
+   "per_head_mean": 31.9,
+   "per_head_max": 202
+  }
+ },
+ "needle_entries": {
+  "total": 21285,
+  "per_head_mean": 37.0,
+  "per_head_max": 220
+ },
+ "after": {
+  "fixed_after": 21,
+  "keys_fixed_after": 16,
+  "reps_fed": 37,
+  "unchanged_tail": 16,
+  "entries": {
+   "total": 27557,
+   "per_head_mean": 47.8,
+   "per_head_max": 374
+  }
+ },
+ "final_entries": {
+  "total": 32765,
+  "per_head_mean": 56.9,
+  "per_head_max": 407
+ },
+ "secs": 2.3
+}

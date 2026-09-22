@@ -1,0 +1,30 @@
+{
+ "checkpoint": "experiments/main_recall/out/rope/s0/n4096/model_best.pt",
+ "checkpoint_size_bytes": 4793634,
+ "arch": "rope",
+ "seed": "s0",
+ "seed_index": 0,
+ "dim": 64,
+ "dim_ff": 256,
+ "depth": 2,
+ "num_heads": 1,
+ "attention": "softmax",
+ "position": "rope",
+ "diagnostic": "mechanism_n4096",
+ "n": 4096,
+ "tokens": 12289,
+ "samples": 2,
+ "queries": 8192,
+ "sample_seed": 0,
+ "accuracy": 1.0,
+ "prev": [
+  0.5149,
+  0.0002
+ ],
+ "value": [
+  0.0001,
+  0.9337
+ ],
+ "first_layer_previous_a_mass": 0.5149,
+ "second_layer_correct_b_mass": 0.9337
+}

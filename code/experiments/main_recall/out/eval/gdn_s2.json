@@ -1,0 +1,182 @@
+{
+ "run": "experiments/main_recall/out/gdn/s2",
+ "arch": "gdn",
+ "lr": 0.001,
+ "seed": 2,
+ "stage_steps": 50000,
+ "ladder": [
+  2,
+  4,
+  8,
+  16,
+  32,
+  64,
+  128,
+  256,
+  512,
+  1024,
+  2048,
+  4096
+ ],
+ "points": {
+  "2": 0.999969482421875,
+  "4": 0.999969482421875,
+  "8": 1.0,
+  "16": 0.999969482421875,
+  "32": 0.999908447265625,
+  "64": 0.999603271484375,
+  "128": 0.9986572265625,
+  "256": 0.950592041015625,
+  "512": 0.575836181640625,
+  "1024": 0.198486328125,
+  "2048": 0.07232666015625,
+  "4096": 0.03265380859375
+ },
+ "stages": {
+  "2": {
+   "last_probe_step": 1250,
+   "best_probe_acc": 1.0,
+   "probes": 6,
+   "best_step": 1250,
+   "best_acc": 1.0,
+   "batch": 16384
+  },
+  "4": {
+   "last_probe_step": 2250,
+   "best_probe_acc": 1.0,
+   "probes": 10,
+   "best_step": 2250,
+   "best_acc": 1.0,
+   "batch": 8192
+  },
+  "8": {
+   "last_probe_step": 1500,
+   "best_probe_acc": 1.0,
+   "probes": 7,
+   "best_step": 1500,
+   "best_acc": 1.0,
+   "batch": 4096
+  },
+  "16": {
+   "last_probe_step": 5250,
+   "best_probe_acc": 1.0,
+   "probes": 22,
+   "best_step": 5250,
+   "best_acc": 1.0,
+   "batch": 2048
+  },
+  "32": {
+   "last_probe_step": 10000,
+   "best_probe_acc": 1.0,
+   "probes": 41,
+   "best_step": 10000,
+   "best_acc": 1.0,
+   "batch": 1024
+  },
+  "64": {
+   "last_probe_step": 10250,
+   "best_probe_acc": 1.0,
+   "probes": 42,
+   "best_step": 10250,
+   "best_acc": 1.0,
+   "batch": 512
+  },
+  "128": {
+   "last_probe_step": 49999,
+   "best_probe_acc": 0.998291015625,
+   "probes": 201,
+   "best_step": 46500,
+   "best_acc": 0.998291015625,
+   "batch": 256
+  },
+  "256": {
+   "last_probe_step": 49999,
+   "best_probe_acc": 0.95245361328125,
+   "probes": 201,
+   "best_step": 49000,
+   "best_acc": 0.95245361328125,
+   "batch": 128
+  },
+  "512": {
+   "last_probe_step": 49999,
+   "best_probe_acc": 0.578826904296875,
+   "probes": 201,
+   "best_step": 49750,
+   "best_acc": 0.578826904296875,
+   "batch": 64
+  },
+  "1024": {
+   "last_probe_step": 49999,
+   "best_probe_acc": 0.19830322265625,
+   "probes": 201,
+   "best_step": 47250,
+   "best_acc": 0.19830322265625,
+   "batch": 32
+  },
+  "2048": {
+   "last_probe_step": 49999,
+   "best_probe_acc": 0.076751708984375,
+   "probes": 201,
+   "best_step": 48000,
+   "best_acc": 0.076751708984375,
+   "batch": 16
+  },
+  "4096": {
+   "last_probe_step": 49999,
+   "best_probe_acc": 0.03472900390625,
+   "probes": 201,
+   "best_step": 28000,
+   "best_acc": 0.03472900390625,
+   "batch": 8
+  }
+ },
+ "train_example": {
+  "steps": 50000,
+  "out": "experiments/main_recall/out/gdn/s2/n2",
+  "lr": 0.001,
+  "lr_final": 0.0,
+  "warmup": 1000,
+  "weight_decay": 0.1,
+  "adam_betas": [
+   0.9,
+   0.999
+  ],
+  "grad_clip": 1.0,
+  "grad_accum": 1,
+  "batch": 16384,
+  "c_start": 1000000000,
+  "c_steps": 10000,
+  "alpha_start": 1000000000,
+  "alpha_speed": 1000,
+  "alpha_target": 10.0,
+  "alpha_init": null,
+  "alpha_bwd_cap": 2.0,
+  "exact_forward": false,
+  "checkpoint_blocks": false,
+  "lr_alpha_phase": 0.0,
+  "beta": 2.0,
+  "log_every": 100,
+  "probe_every": 250,
+  "probe_batches": 1,
+  "early_stop_acc": 1.0,
+  "checkpoint_at": [],
+  "resume_every": 5000,
+  "seed": 2,
+  "device": "cuda"
+ },
+ "model": {
+  "vocab_size": 8320,
+  "depth": 2,
+  "dim": 64,
+  "num_heads": 1,
+  "d_qk": 64,
+  "d_v": 64,
+  "dim_ff": 256,
+  "num_kv_heads": 1,
+  "attn": "gated-deltanet",
+  "pos": "nope",
+  "rope_base": 10000.0,
+  "gdn_expand_v": 2,
+  "norm_eps": 1e-05
+ }
+}

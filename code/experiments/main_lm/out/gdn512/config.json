@@ -1,0 +1,52 @@
+{
+ "model": {
+  "vocab_size": 50304,
+  "depth": 8,
+  "dim": 512,
+  "num_heads": 4,
+  "d_qk": 128,
+  "d_v": 128,
+  "dim_ff": 1408,
+  "attn": "gated-deltanet",
+  "pos": "nope",
+  "gdn_expand_v": 1,
+  "norm_eps": 1e-05
+ },
+ "train": {
+  "steps": 47100,
+  "out": "experiments/main_lm/out/gdn512",
+  "lr": 0.002,
+  "lr_final": 2e-05,
+  "warmup": 942,
+  "weight_decay": 0.1,
+  "adam_betas": [
+   0.9,
+   0.999
+  ],
+  "grad_clip": 1.0,
+  "grad_accum": 1,
+  "batch": 16,
+  "c_start": 942,
+  "c_steps": 3768,
+  "alpha_start": 4710,
+  "alpha_speed": 4277,
+  "alpha_target": 10.0,
+  "alpha_init": null,
+  "alpha_bwd_cap": 2.0,
+  "lr_alpha_phase": 0.0,
+  "beta": 4.0,
+  "probe_every": 250,
+  "early_stop_acc": 1.0,
+  "checkpoint_at": [
+   4710,
+   20000,
+   23550,
+   40000,
+   42390
+  ],
+  "resume_every": 5000,
+  "seed": 0,
+  "device": "cuda"
+ },
+ "task": "tokens: vocab 50257, train 30.859B, val 0.165B, test 0.085B"
+}

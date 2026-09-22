@@ -1,0 +1,49 @@
+{
+ "model": {
+  "vocab_size": 8320,
+  "depth": 2,
+  "dim": 64,
+  "num_heads": 1,
+  "d_qk": 64,
+  "d_v": 64,
+  "dim_ff": 256,
+  "attn": "softmax",
+  "pos": "rope",
+  "gdn_expand_v": 2,
+  "norm_eps": 1e-05
+ },
+ "train": {
+  "steps": 100000,
+  "out": "experiments/app_recall_discovery/out/rope/n3/s2",
+  "lr": 0.001,
+  "lr_final": null,
+  "warmup": 1000,
+  "weight_decay": 0.1,
+  "adam_betas": [
+   0.9,
+   0.999
+  ],
+  "grad_clip": 1.0,
+  "grad_accum": 1,
+  "batch": 10922,
+  "c_start": 1000000000,
+  "c_steps": 10000,
+  "alpha_start": 1000000000,
+  "alpha_speed": 1000,
+  "alpha_target": 10.0,
+  "alpha_init": null,
+  "alpha_bwd_cap": 2.0,
+  "exact_forward": false,
+  "lr_alpha_phase": 0.0,
+  "beta": 2.0,
+  "log_every": 100,
+  "probe_every": 250,
+  "probe_batches": 1,
+  "early_stop_acc": 1.0,
+  "checkpoint_at": [],
+  "resume_every": 5000,
+  "seed": 2,
+  "device": "cuda"
+ },
+ "task": "recall: 3 pairs, key_vocab 4096, vocab 8193"
+}

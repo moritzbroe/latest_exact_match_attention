@@ -1,0 +1,17 @@
+{
+ "ckpt": "experiments/main_recall/out/lema/s0/model.pt",
+ "arch": "lema",
+ "seed": "s0",
+ "n_queries": 64,
+ "key_repeats": 4,
+ "query_tokens": 8192,
+ "tokens": 577,
+ "sample_seed": 0,
+ "mass_by_occurrence": [
+  0.0,
+  0.0,
+  0.00073,
+  0.99815
+ ],
+ "mass_elsewhere": 0.00112
+}

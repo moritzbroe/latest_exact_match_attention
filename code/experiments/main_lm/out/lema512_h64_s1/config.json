@@ -1,0 +1,60 @@
+{
+ "model": {
+  "vocab_size": 50304,
+  "depth": 8,
+  "dim": 512,
+  "num_heads": 8,
+  "d_qk": 64,
+  "d_v": 64,
+  "dim_ff": 1408,
+  "num_kv_heads": 8,
+  "attn": "lema",
+  "pos": "nope",
+  "rope_base": 10000.0,
+  "gdn_expand_v": 2,
+  "norm_eps": 1e-05
+ },
+ "train": {
+  "steps": 47100,
+  "out": "experiments/main_lm/out/lema512_h64_s1",
+  "lr": 0.002,
+  "lr_final": 2e-05,
+  "lr_halve_every": 0,
+  "lr_halve_smooth": false,
+  "warmup": 942,
+  "weight_decay": 0.1,
+  "adam_betas": [
+   0.9,
+   0.999
+  ],
+  "grad_clip": 1.0,
+  "grad_accum": 2,
+  "batch": 8,
+  "c_start": 942,
+  "c_steps": 3768,
+  "alpha_start": 4710,
+  "alpha_speed": 4293,
+  "alpha_target": 10.0,
+  "alpha_init": null,
+  "alpha_bwd_cap": 2.0,
+  "exact_forward": false,
+  "checkpoint_blocks": false,
+  "lr_alpha_phase": 0.0,
+  "beta": 4.0,
+  "log_every": 100,
+  "probe_every": 0,
+  "probe_batches": 1,
+  "early_stop_acc": 1.0,
+  "checkpoint_at": [
+   4710,
+   20000,
+   23550,
+   40000,
+   42390
+  ],
+  "resume_every": 5000,
+  "seed": 1,
+  "device": "cuda"
+ },
+ "task": "tokens: vocab 50257, train 30.859B, val 0.123B, test 0.127B"
+}

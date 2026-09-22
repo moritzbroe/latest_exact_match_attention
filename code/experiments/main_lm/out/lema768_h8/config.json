@@ -1,0 +1,54 @@
+{
+ "model": {
+  "vocab_size": 50304,
+  "depth": 12,
+  "dim": 768,
+  "num_heads": 96,
+  "d_qk": 8,
+  "d_v": 8,
+  "dim_ff": 2048,
+  "attn": "lema",
+  "pos": "nope",
+  "gdn_expand_v": 2,
+  "norm_eps": 1e-05
+ },
+ "train": {
+  "steps": 99000,
+  "out": "experiments/main_lm/out/lema768_h8",
+  "lr": 0.0013333333333333333,
+  "lr_final": 1.3333333333333333e-05,
+  "warmup": 1980,
+  "weight_decay": 0.1,
+  "adam_betas": [
+   0.9,
+   0.999
+  ],
+  "grad_clip": 1.0,
+  "grad_accum": 1,
+  "batch": 16,
+  "c_start": 1980,
+  "c_steps": 7920,
+  "alpha_start": 9900,
+  "alpha_speed": 9237,
+  "alpha_target": 10.0,
+  "alpha_init": null,
+  "alpha_bwd_cap": 2.0,
+  "lr_alpha_phase": 0.0,
+  "beta": 4.0,
+  "probe_every": 250,
+  "early_stop_acc": 1.0,
+  "checkpoint_at": [
+   9900,
+   20000,
+   40000,
+   49500,
+   60000,
+   80000,
+   89100
+  ],
+  "resume_every": 5000,
+  "seed": 0,
+  "device": "cuda"
+ },
+ "task": "tokens: vocab 50257, train 30.859B, val 0.165B, test 0.085B"
+}

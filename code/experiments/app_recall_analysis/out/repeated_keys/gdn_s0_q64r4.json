@@ -1,0 +1,26 @@
+{
+ "checkpoint": "experiments/main_recall/out/gdn/s0/n64/model_best.pt",
+ "checkpoint_size_bytes": 4941730,
+ "arch": "gdn",
+ "seed": "s0",
+ "seed_index": 0,
+ "dim": 64,
+ "dim_ff": 256,
+ "depth": 2,
+ "num_heads": 1,
+ "attention": "gated-deltanet",
+ "position": "nope",
+ "diagnostic": "competing_associations_q64r4",
+ "n_queries": 64,
+ "key_repeats": 4,
+ "tokens": 577,
+ "query_tokens": 8192,
+ "sample_seed": 0,
+ "mass_by_occurrence": [
+  0.19683,
+  0.22817,
+  0.16798,
+  0.074
+ ],
+ "mass_elsewhere": 0.33303
+}

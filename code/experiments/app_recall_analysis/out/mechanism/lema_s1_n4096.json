@@ -1,0 +1,30 @@
+{
+ "ckpt": "experiments/main_recall/out/lema/s1/model.pt",
+ "arch": "lema",
+ "seed": "s1",
+ "n": 4096,
+ "tokens": 12289,
+ "samples": 2,
+ "queries": 8192,
+ "accuracy": 0.9957,
+ "sample_seed": 0,
+ "prev": [
+  0.9995,
+  0.0
+ ],
+ "value": [
+  0.0,
+  0.9956
+ ],
+ "q0_sep": 0.9951,
+ "q0_none": 0.0049,
+ "q0_key": 0.0,
+ "q0_value": 0.0,
+ "q0_query": 0.0,
+ "l0_distinct_key_insert_codes": 1,
+ "l0_distinct_value_lookup_codes": 3,
+ "l0_codes_equal": false,
+ "l1_distinct_value_insert_codes": 4099,
+ "l1_keys_seen": 4096,
+ "l1_insert_code_constant_per_key": 0.9988
+}
