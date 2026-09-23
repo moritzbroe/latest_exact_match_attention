@@ -1,6 +1,6 @@
 # Latest Exact Match Attention
 
-Code and recorded measurements for the paper *Latest Exact Match Attention* (Moritz Brösamle, 2026; arXiv link to follow).
+Code and recorded measurements for the paper *Latest Exact Match Attention* (Moritz Brösamle, 2026, arXiv:2609.25802, https://arxiv.org/abs/2609.25802).
 
     code/lema/          the library: model, attention, training, the inference store
     code/experiments/   the experiments, each with a README and its measurements in out/
@@ -53,7 +53,7 @@ Figures 1 and 5 are typeset in the paper. Tables 1 to 4 belong to the proofs. Ta
     @article{broesamle2026lema,
       title   = {Latest Exact Match Attention},
       author  = {Moritz Br{\"o}samle},
-      journal = {arXiv preprint},
+      journal = {arXiv preprint arXiv:2609.25802},
       year    = {2026}
     }
 
